@@ -21,6 +21,13 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		initialize();
 		launch(args);
+	}
+	
+	public static void initialize() {
+		Business business = new Business();
+		business.initialize();
+		System.out.println("initialized successfully");
 	}
 }
