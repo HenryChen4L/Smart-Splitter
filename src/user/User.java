@@ -65,7 +65,7 @@ public class User {
 		for(Bill bill: billDirectory.billDirectory) {
 			int size = bill.getSplitterDirectory().splitterDirectory.size();
 			for(Transaction transaction: bill.getTransactionDirectory().transactionDirectory) {
-				if(transaction.getPayer().getName() == userName) {
+				if(transaction.getPayer().getName().equals(this.userName)) {
 					totalIncomeDouble += Math.round(transaction.getTotal() / size * (size - 1) * 100.0) / 100.0;
 				}
 			}
@@ -78,7 +78,7 @@ public class User {
 		for(Bill bill: billDirectory.billDirectory) {
 			int size = bill.getSplitterDirectory().splitterDirectory.size();
 			for(Transaction transaction: bill.getTransactionDirectory().transactionDirectory) {
-				if(transaction.getPayer().getName() == userName) {
+				if(transaction.getPayer().getName() == this.userName) {
 					totalExpenseDouble += transaction.getTotal();
 				} else {
 					totalExpenseDouble += Math.round(transaction.getTotal() / size * 100.0) / 100.0;

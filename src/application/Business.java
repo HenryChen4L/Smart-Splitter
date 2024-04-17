@@ -19,10 +19,6 @@ public class Business {
 		User user2 = userDirectory.addNewUser("zhou", "rewqrewq");
 		currentUser = user1;
 	}
-	
-	//TODO
-	public void login() {
-	}
 
 	public UserDirectory getUserDirectory() {
 		return userDirectory;
