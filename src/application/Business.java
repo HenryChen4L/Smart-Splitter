@@ -8,6 +8,7 @@ import user.UserDirectory;
 public class Business {
 	
 	private UserDirectory userDirectory;
+	private User currentUser;
 
 	public Business() {
 		this.userDirectory = new UserDirectory();
@@ -16,5 +17,30 @@ public class Business {
 	public void initialize() {
 		User user1 = userDirectory.addNewUser("zhengyu", "qwerqwer");
 		User user2 = userDirectory.addNewUser("yuzheng", "rewqrewq");
+		currentUser = user1;
 	}
+	
+	//TODO
+	public void login() {
+	}
+
+	public UserDirectory getUserDirectory() {
+		return userDirectory;
+	}
+
+	public void setUserDirectory(UserDirectory userDirectory) {
+		this.userDirectory = userDirectory;
+	}
+
+	public User getCurrentUser() {
+		return currentUser;
+	}
+
+	public void setCurrentUser(User currentUser) {
+		this.currentUser = currentUser;
+	}
+	
+	
+	
+	
 }

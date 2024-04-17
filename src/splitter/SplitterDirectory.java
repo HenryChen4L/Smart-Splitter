@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class SplitterDirectory {
 
-	ArrayList<Splitter> splitterDirectory;
+	public ArrayList<Splitter> splitterDirectory;
 	
 	public SplitterDirectory() {
 		this.splitterDirectory = new ArrayList<Splitter>();

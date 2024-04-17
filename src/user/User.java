@@ -1,13 +1,17 @@
 package user;
 
+import bill.BillDirectory;
+
 public class User {
 	
 	private String userName;
 	private String passwd;
+	private BillDirectory billDirectory;
 	
 	public User(String userName, String passwd) {
 		this.userName = userName;
 		this.passwd = passwd;
+		this.billDirectory = new BillDirectory();
 	}
 	
 	
@@ -32,6 +36,19 @@ public class User {
 
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
+	}
+
+	
+
+
+	public BillDirectory getBillDirectory() {
+		return billDirectory;
+	}
+
+
+
+	public void setBillDirectory(BillDirectory billDirectory) {
+		this.billDirectory = billDirectory;
 	}
 
 

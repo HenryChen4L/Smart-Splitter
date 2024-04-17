@@ -9,11 +9,17 @@ import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
+	
+	public static Business business = new Business();
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			BorderPane root = new BorderPane();
-			Parent root = FXMLLoader.load(getClass().getResource("mybill.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("mybill.fxml"));
+	        Parent root = loader.load();
+	        MyBillController controller = loader.getController();
+	        controller.renderPage();
+	        primaryStage.setTitle("Smart Splitter");
 			Scene scene = new Scene(root,400,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -29,7 +35,6 @@ public class Main extends Application {
 	}
 	
 	public static void initialize() {
-		Business business = new Business();
 		business.initialize();
 		System.out.println("initialized successfully");
 	}

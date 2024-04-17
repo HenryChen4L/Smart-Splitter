@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BillDirectory {
 	
-	ArrayList<Bill> billDirectory;
+	public ArrayList<Bill> billDirectory;
 	
 	public BillDirectory() {
 		this.billDirectory = new ArrayList<Bill>();

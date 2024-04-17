@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox fx:id="summaryBox" alignment="TOP_CENTER" prefHeight="445.0" prefWidth="411.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PersonalSummaryController">
-   <Button mnemonicParsing="false" text="Back" />
+   <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackAction" text="Back" />
    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Personal Summary" VBox.vgrow="NEVER" />
     
     <VBox alignment="TOP_LEFT" prefHeight="350.0" prefWidth="371.0" spacing="10">

@@ -16,4 +16,8 @@ public class Splitter {
 		this.name = name;
 	}
 	
+	@Override
+	public String toString() {
+		return name;
+	}
 }

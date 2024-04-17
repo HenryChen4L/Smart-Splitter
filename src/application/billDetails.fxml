@@ -7,18 +7,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="451.0" prefWidth="324.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BillDetailsController">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BillDetailsController">
    <children>
-      <Button mnemonicParsing="false" text="Back" />
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackAction" text="Back" />
       <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF6B00;" text="Bill Details" VBox.vgrow="NEVER" />
       <Label style="-fx-font-weight: bold;" text="Bill Total Amount:" />
       <Label fx:id="billTotalAmount" prefHeight="33.0" prefWidth="124.0" text="" />
-      <Button style="-fx-background-color: #F0AD4E; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="View Transaction Details &gt;" />
+      <Button fx:id="viewDetail" onAction="#handleViewDetail" style="-fx-background-color: #F0AD4E; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="View Transaction Details &gt;" />
       <HBox alignment="CENTER_LEFT" prefHeight="247.0" prefWidth="263.0" spacing="10">
          <children>
-            <ScrollPane prefHeight="211.0" prefWidth="326.0">
+            <ScrollPane prefHeight="349.0" prefWidth="379.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="394.0" prefWidth="290.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="375.0">
                      <children>
                         <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="5.0" layoutY="6.0" style="-fx-font-weight: bold;" text="Date:" />
                         <VBox layoutX="23.0" layoutY="29.0">

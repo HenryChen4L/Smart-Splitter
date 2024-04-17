@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="456.0" prefWidth="316.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyBillController">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyBillController">
    <children>
       <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF6B00;" text="My Bill" VBox.vgrow="NEVER" />
       <HBox alignment="CENTER_LEFT" spacing="10">
@@ -17,35 +17,9 @@
             <Button fx:id="personalButton" onAction="#handlePersonalAction" prefHeight="37.0" prefWidth="146.0" style="-fx-background-color: #D9534F; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="My Accout" />
          </children>
       </HBox>
-      <ScrollPane prefHeight="337.0" prefWidth="295.0">
+      <ScrollPane prefHeight="479.0" prefWidth="380.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="272.0">
-               <children>
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="12.0" layoutY="12.0" style="-fx-font-weight: bold;" text="Bill Name:" />
-                  <Button layoutX="37.0" layoutY="116.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="175.0" text="View Bill &gt;" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="12.0" layoutY="65.0" style="-fx-font-weight: bold;" text="Total Amount:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="12.0" layoutY="90.0" style="-fx-font-weight: bold;" text="Payers:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="12.0" layoutY="39.0" style="-fx-font-weight: bold;" text="Date:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="178.0" style="-fx-font-weight: bold;" text="Bill Name:" />
-                  <Button layoutX="39.0" layoutY="282.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="175.0" text="View Bill &gt;" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="231.0" style="-fx-font-weight: bold;" text="Total Amount:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="256.0" style="-fx-font-weight: bold;" text="Payers:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="205.0" style="-fx-font-weight: bold;" text="Date:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="21.0" layoutY="344.0" style="-fx-font-weight: bold;" text="Bill Name:" />
-                  <Button layoutX="46.0" layoutY="448.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="175.0" text="View Bill Group &gt;" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="21.0" layoutY="397.0" style="-fx-font-weight: bold;" text="Total Amount:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="21.0" layoutY="422.0" style="-fx-font-weight: bold;" text="Members in Group:" />
-                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="21.0" layoutY="371.0" style="-fx-font-weight: bold;" text="Date:" />
-                  <Label fx:id="billName" layoutX="116.0" layoutY="12.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billDate" layoutX="116.0" layoutY="39.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billTotalAmount" layoutX="116.0" layoutY="65.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billPayers" layoutX="116.0" layoutY="90.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billName1" layoutX="116.0" layoutY="180.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billDate1" layoutX="116.0" layoutY="207.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billTotalAmount1" layoutX="116.0" layoutY="233.0" prefHeight="16.0" prefWidth="146.0" text="" />
-                  <Label fx:id="billPayers1" layoutX="116.0" layoutY="258.0" prefHeight="16.0" prefWidth="146.0" text="" />
-               </children>
-            </AnchorPane>
+          <AnchorPane fx:id="list" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="349.0" />
         </content>
       </ScrollPane>
    </children>
