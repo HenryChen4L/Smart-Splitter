@@ -48,11 +48,11 @@ public class BillTransactionsController {
 		Font font = new Font("Arial", 15);
 		for(Map.Entry<Splitter[], Double> entry : bill.getStatementMap().entrySet()) {
 			if(entry.getValue() < 0) {
-				Label statementLabel = new Label(entry.getKey()[0].toString() + " -> " + entry.getKey()[1].toString() + ": " + Math.abs(entry.getValue()));
+				Label statementLabel = new Label(entry.getKey()[0].toString() + " should pay " + entry.getKey()[1].toString() + ": " + Math.abs(entry.getValue()));
 				statementLabel.setFont(font);
 				listBox.getChildren().add(statementLabel);
 			} else {
-				Label statementLabel = new Label(entry.getKey()[1].toString() + " -> " + entry.getKey()[0].toString() + ": " + Math.abs(entry.getValue()));
+				Label statementLabel = new Label(entry.getKey()[1].toString() + " should pay " + entry.getKey()[0].toString() + ": " + Math.abs(entry.getValue()));
 				statementLabel.setFont(font);
 				listBox.getChildren().add(statementLabel);
 			}
