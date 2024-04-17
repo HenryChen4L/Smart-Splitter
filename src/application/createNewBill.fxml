@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="billInfoBox" alignment="TOP_CENTER" prefHeight="389.0" prefWidth="313.0" spacing="10" style="-fx-background-color: #FFF7ED; -fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Create a Bill" VBox.vgrow="NEVER" />
+      <VBox alignment="TOP_LEFT" spacing="5">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Bill Name:" VBox.vgrow="NEVER" />
+            <Label fx:id="createBillName" prefHeight="20.0" prefWidth="151.0" style="-fx-background-color: white; -fx-padding: 2;" text="" VBox.vgrow="NEVER" />
+            <Label style="-fx-font-weight: bold;" text="Payer:" VBox.vgrow="NEVER" />
+            <Label fx:id="addBillPayer" prefHeight="20.0" prefWidth="153.0" style="-fx-background-color: white; -fx-padding: 2;" text="" VBox.vgrow="NEVER" />
+         </children>
+      </VBox>
+      <Button style="-fx-background-color: #F0AD4E; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 10 20;" text="Create" VBox.vgrow="NEVER" />
+   </children>
+</VBox>
