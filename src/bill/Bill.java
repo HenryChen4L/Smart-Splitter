@@ -51,6 +51,14 @@ public class Bill {
 		this.billName = billName;
 	}
 
+	public HashMap<Splitter[], Double> getStatementMap() {
+		return statementMap;
+	}
+
+	public void setStatementMap(HashMap<Splitter[], Double> statementMap) {
+		this.statementMap = statementMap;
+	}
+
 	public SplitterDirectory getSplitterDirectory() {
 		return splitterDirectory;
 	}

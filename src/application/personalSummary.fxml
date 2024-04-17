@@ -11,8 +11,8 @@
     
     <VBox alignment="TOP_LEFT" prefHeight="350.0" prefWidth="371.0" spacing="10">
         <HBox>
-            <Label style="-fx-font-weight: bold;" text="Net Balance:" HBox.hgrow="NEVER" />
-            <Label fx:id="netBalance" prefHeight="16.0" prefWidth="284.0" text="" HBox.hgrow="ALWAYS" />
+            <Label prefHeight="16.0" prefWidth="106.0" style="-fx-font-weight: bold;" text="Net Expenses:" HBox.hgrow="NEVER" />
+            <Label fx:id="netBalance" prefHeight="16.0" prefWidth="261.0" text="" HBox.hgrow="ALWAYS" />
         </HBox>
         <HBox>
             <Label style="-fx-font-weight: bold;" text="Total Income:" HBox.hgrow="NEVER" />

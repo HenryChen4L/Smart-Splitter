@@ -55,7 +55,10 @@ public class BillDetailsController {
 	@FXML
 	private void handleViewDetailAction(ActionEvent event) {
 		try {
-			Parent billTransactionParent = FXMLLoader.load(getClass().getResource("billTransactions.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("billTransactions.fxml"));
+	        Parent billTransactionParent = loader.load();
+	        BillTransactionsController controller = loader.getController();
+	        controller.renderPage(bill);
 			Scene scene = new Scene(billTransactionParent,400,600);
 			Stage primaryStage = (Stage) viewDetailButton.getScene().getWindow();
 			primaryStage.setScene(scene);

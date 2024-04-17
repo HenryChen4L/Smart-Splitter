@@ -15,8 +15,8 @@ public class Business {
 	}
 	
 	public void initialize() {
-		User user1 = userDirectory.addNewUser("zhengyu", "qwerqwer");
-		User user2 = userDirectory.addNewUser("yuzheng", "rewqrewq");
+		User user1 = userDirectory.addNewUser("chen", "qwerqwer");
+		User user2 = userDirectory.addNewUser("zhou", "rewqrewq");
 		currentUser = user1;
 	}
 	

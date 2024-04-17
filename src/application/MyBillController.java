@@ -44,7 +44,10 @@ public class MyBillController {
 	@FXML
 	private void handlePersonalAction(ActionEvent event) {
 		try {
-			Parent personalRoot = FXMLLoader.load(getClass().getResource("personalSummary.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("personalSummary.fxml"));
+	        Parent personalRoot = loader.load();
+	        PersonalSummaryController controller = loader.getController();
+	        controller.renderPage(Main.business.getCurrentUser());
 			Scene scene = new Scene(personalRoot,400,600);
 			Stage primaryStage = (Stage) personalButton.getScene().getWindow();
 			primaryStage.setScene(scene);

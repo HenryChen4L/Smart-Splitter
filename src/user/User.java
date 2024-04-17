@@ -1,6 +1,8 @@
 package user;
 
+import bill.Bill;
 import bill.BillDirectory;
+import transaction.Transaction;
 
 public class User {
 	
@@ -56,5 +58,34 @@ public class User {
 	@Override
 	public String toString() {
 		return this.userName;
+	}
+	
+	public Double getTotalIncome() {
+		Double totalIncomeDouble = 0.0;
+		for(Bill bill: billDirectory.billDirectory) {
+			int size = bill.getSplitterDirectory().splitterDirectory.size();
+			for(Transaction transaction: bill.getTransactionDirectory().transactionDirectory) {
+				if(transaction.getPayer().getName() == userName) {
+					totalIncomeDouble += Math.round(transaction.getTotal() / size * (size - 1) * 100.0) / 100.0;
+				}
+			}
+		}
+		return totalIncomeDouble;
+	}
+	
+	public Double getTotalExpense() {
+		Double totalExpenseDouble = 0.0;
+		for(Bill bill: billDirectory.billDirectory) {
+			int size = bill.getSplitterDirectory().splitterDirectory.size();
+			for(Transaction transaction: bill.getTransactionDirectory().transactionDirectory) {
+				if(transaction.getPayer().getName() == userName) {
+					totalExpenseDouble += transaction.getTotal();
+				} else {
+					totalExpenseDouble += Math.round(transaction.getTotal() / size * 100.0) / 100.0;
+				}
+			}
+		}
+		
+		return totalExpenseDouble;
 	}
 }
