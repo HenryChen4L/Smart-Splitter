@@ -19,7 +19,7 @@
          <children>
             <ScrollPane prefHeight="275.0" prefWidth="389.0">
               <content>
-                <AnchorPane fx:id="list" minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="375.0" />
+                <AnchorPane fx:id="list" minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="353.0" />
               </content>
             </ScrollPane>
          </children>

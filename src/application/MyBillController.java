@@ -88,7 +88,7 @@ public class MyBillController {
             HBox splitterBox = new HBox(5);
             Label splitterLabel = new Label("Splitters:");
             splitterLabel.setFont(font);
-            Text splitterText = new Text(bill.getSplitterDirectory().splitterDirectory.toString());
+            Text splitterText = new Text(bill.getSplitterDirectory().splitterDirectory.toString().replaceAll("\\[|\\]", ""));
             splitterText.setFont(font);
             splitterBox.getChildren().addAll(splitterLabel, splitterText);
             Button button = new Button("View Bill >");

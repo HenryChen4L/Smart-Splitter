@@ -1,6 +1,10 @@
 package bill;
 
+import java.util.HashMap;
+
+import splitter.Splitter;
 import splitter.SplitterDirectory;
+import transaction.Transaction;
 import transaction.TransactionDirectory;
 
 public class Bill {
@@ -49,7 +53,12 @@ public class Bill {
 		this.transactionDirectory = transactionDirectory;
 	}
 	
-	
+	public Transaction addNewTransaction(double total, Splitter payer, String transactionName, String date) {
+		Transaction transaction = new Transaction(total, payer, transactionName, date);
+		this.transactionDirectory.transactionDirectory.add(transaction);
+		this.balance += total;
+		return transaction;
+	}
 	
 	
 }

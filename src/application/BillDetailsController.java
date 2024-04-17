@@ -20,6 +20,8 @@ import transaction.Transaction;
 
 public class BillDetailsController {
 	
+	private Bill bill;
+	
 	@FXML
 	private Button backButton;
 	
@@ -65,8 +67,25 @@ public class BillDetailsController {
 	@FXML
 	private void handleCreateTransactionAction(ActionEvent event) {
 		try {
-			Parent newTransactionParent = FXMLLoader.load(getClass().getResource("addNewLedgerEntry.fxml"));
-			Scene scene = new Scene(newTransactionParent,400,600);
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("addNewLedgerEntry.fxml"));
+	        Parent newTransactionParent = loader.load();
+	        AddNewTransactionController controller = loader.getController();
+	        controller.renderPage(bill);			
+	        Scene scene = new Scene(newTransactionParent,400,600);
+			Stage primaryStage = (Stage) createTransactionButton.getScene().getWindow();
+			primaryStage.setScene(scene);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void handleViewTransactionDetail(Transaction transaction) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("transactionDetails.fxml"));
+	        Parent transactionParent = loader.load();
+	        TransactionDetailsController controller = loader.getController();
+	        controller.renderPage(bill, transaction);			
+	        Scene scene = new Scene(transactionParent,400,600);
 			Stage primaryStage = (Stage) createTransactionButton.getScene().getWindow();
 			primaryStage.setScene(scene);
 		} catch (IOException e) {
@@ -75,6 +94,7 @@ public class BillDetailsController {
 	}
 	
 	public void renderBillDetails(Bill bill) {
+		this.bill = bill;
 		billTotalAmount.setText(String.valueOf(bill.getBalance()));
 		VBox listBox = new VBox(20);
 		Font font = new Font("Arial", 13);
@@ -102,11 +122,14 @@ public class BillDetailsController {
             HBox splitterBox = new HBox(5);
             Label splitterLabel = new Label("Splitters:");
             splitterLabel.setFont(font);
-            Text splitterText = new Text(transaction.getSplitterDirectory().splitterDirectory.toString());
+            Text splitterText = new Text(bill.getSplitterDirectory().splitterDirectory.toString().replaceAll("\\[|\\]", ""));
             splitterText.setFont(font);
             splitterBox.getChildren().addAll(splitterLabel, splitterText);
+            Button button = new Button("View Transaction >");
+            button.setPrefSize(140, 40);
+            button.setOnAction(e -> handleViewTransactionDetail(transaction));
 
-            itemBox.getChildren().addAll(dateBox, nameBox, amountBox, splitterBox);
+            itemBox.getChildren().addAll(dateBox, nameBox, amountBox, splitterBox, button);
             itemBox.setStyle("-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-padding: 10;");
             
             listBox.getChildren().add(itemBox);
