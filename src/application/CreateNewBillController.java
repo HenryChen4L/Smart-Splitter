@@ -33,10 +33,7 @@ public class CreateNewBillController {
 			// create new Bill
 			String billName = createBillName.getText();
 			String[] billPayer = textPayers.getText().split(", ");
-			Bill bill = Main.business.getCurrentUser().getBillDirectory().createNewBill(billName);
-			for(String payer: billPayer) {
-				bill.getSplitterDirectory().addNewSplitter(payer);
-			}
+			Bill bill = Main.business.getCurrentUser().getBillDirectory().createNewBill(billName, billPayer);
 			
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("mybill.fxml"));

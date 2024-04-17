@@ -12,15 +12,15 @@
     <VBox alignment="TOP_LEFT" prefHeight="350.0" prefWidth="371.0" spacing="10">
         <HBox>
             <Label style="-fx-font-weight: bold;" text="Net Balance:" HBox.hgrow="NEVER" />
-            <Label fx:id="totalBalance" prefHeight="16.0" prefWidth="153.0" text="" HBox.hgrow="ALWAYS" />
+            <Label fx:id="netBalance" prefHeight="16.0" prefWidth="284.0" text="" HBox.hgrow="ALWAYS" />
         </HBox>
         <HBox>
             <Label style="-fx-font-weight: bold;" text="Total Income:" HBox.hgrow="NEVER" />
-            <Label fx:id="totalIncome" prefHeight="16.0" prefWidth="166.0" text="" HBox.hgrow="ALWAYS" />
+            <Label fx:id="totalIncome" prefHeight="16.0" prefWidth="250.0" text="" HBox.hgrow="ALWAYS" />
         </HBox>
         <HBox>
             <Label style="-fx-font-weight: bold;" text="Total Expenses:" HBox.hgrow="NEVER" />
-            <Label fx:id="totalExpenses" prefHeight="16.0" prefWidth="144.0" text="" HBox.hgrow="ALWAYS" />
+            <Label fx:id="totalExpenses" prefHeight="16.0" prefWidth="237.0" text="" HBox.hgrow="ALWAYS" />
         </HBox>
     </VBox>
 </VBox>
