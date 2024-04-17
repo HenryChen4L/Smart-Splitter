@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="456.0" prefWidth="316.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="456.0" prefWidth="316.0" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyBillController">
    <children>
       <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF6B00;" text="My Bill" VBox.vgrow="NEVER" />
       <HBox alignment="CENTER_LEFT" spacing="10">
          <children>
             <Label text="" HBox.hgrow="ALWAYS" />
-            <Button style="-fx-background-color: #F0AD4E; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="Create Bill" />
-            <Button prefHeight="37.0" prefWidth="146.0" style="-fx-background-color: #D9534F; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="My Accout" />
+            <Button fx:id="createBillButton" onAction="#handleCreateBillAction" style="-fx-background-color: #F0AD4E; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="Create Bill" />
+            <Button fx:id="personalButton" onAction="#handlePersonalAction" prefHeight="37.0" prefWidth="146.0" style="-fx-background-color: #D9534F; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 20;" text="My Accout" />
          </children>
       </HBox>
       <ScrollPane prefHeight="337.0" prefWidth="295.0">

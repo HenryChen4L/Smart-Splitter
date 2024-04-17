@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: #FFF7ED; -fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-padding: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BillTransactionsController">
     <Button style="-fx-background-color: #E1E1E1; -fx-text-fill: #333;" text="Back" />
     <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF6B00;" text="Billing Transactions" />
     <TextField maxHeight="75" minHeight="75" prefHeight="75" />
