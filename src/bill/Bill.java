@@ -1,17 +1,20 @@
 package bill;
 
 import splitter.SplitterDirectory;
+import transaction.TransactionDirectory;
 
 public class Bill {
 	
 	private String billName;
 	private SplitterDirectory splitterDirectory;
 	private double balance = 0;
+	private TransactionDirectory transactionDirectory;
 	
 	public Bill(String billName) {
 		super();
 		this.billName = billName;
 		this.splitterDirectory = new SplitterDirectory();
+		this.transactionDirectory = new TransactionDirectory();
 	}
 
 	public String getBillName() {
@@ -37,6 +40,16 @@ public class Bill {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
+
+	public TransactionDirectory getTransactionDirectory() {
+		return transactionDirectory;
+	}
+
+	public void setTransactionDirectory(TransactionDirectory transactionDirectory) {
+		this.transactionDirectory = transactionDirectory;
+	}
+	
+	
 	
 	
 }

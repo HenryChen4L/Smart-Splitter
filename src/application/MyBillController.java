@@ -53,9 +53,12 @@ public class MyBillController {
 		}
 	}
 	
-	public void handleViewBill() {
+	public void handleViewBill(Bill bill) {
 		try {
-			Parent billDetailParent = FXMLLoader.load(getClass().getResource("billDetails.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("billDetails.fxml"));
+	        Parent billDetailParent = loader.load();
+	        BillDetailsController controller = loader.getController();
+	        controller.renderBillDetails(bill);
 			Scene scene = new Scene(billDetailParent,400,600);
 			Stage primaryStage = (Stage) createBillButton.getScene().getWindow();
 			primaryStage.setScene(scene);
@@ -90,7 +93,7 @@ public class MyBillController {
             splitterBox.getChildren().addAll(splitterLabel, splitterText);
             Button button = new Button("View Bill >");
             button.setPrefSize(140, 40);
-            button.setOnAction(e -> handleViewBill());
+            button.setOnAction(e -> handleViewBill(bill));
 
             itemBox.getChildren().addAll(nameBox, amountBox, splitterBox, button);
             itemBox.setStyle("-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-padding: 10;");

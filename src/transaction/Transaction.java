@@ -10,12 +10,14 @@ public class Transaction {
 	private double total;
 	private String transactionName;
 	private String date;
+	private String note;
 	private SplitterDirectory splitterDirectory;
 	private HashMap<Splitter, Double> transactionDetails;
-	public Transaction(double total, String transactionName, String date, SplitterDirectory splitterDirectory, HashMap<Splitter, Double> transactionDetails) {
+	public Transaction(double total, String note, String transactionName, String date, SplitterDirectory splitterDirectory, HashMap<Splitter, Double> transactionDetails) {
 		super();
 		this.total = total;
 		this.transactionName = transactionName;
+		this.note = note;
 		this.date = date;
 		this.splitterDirectory = splitterDirectory;
 		this.transactionDetails = transactionDetails;
@@ -50,5 +52,12 @@ public class Transaction {
 	public void setTransactionDetails(HashMap<Splitter, Double> transactionDetails) {
 		this.transactionDetails = transactionDetails;
 	}
+	public String getNote() {
+		return note;
+	}
+	public void setNote(String note) {
+		this.note = note;
+	}
+	
 	
 }
